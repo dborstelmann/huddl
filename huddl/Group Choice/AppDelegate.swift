@@ -17,12 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         
-//        Parse.setApplicationId("OfxnFL81wpHkdNNcU3Sy2dzxmWntKc8ExkfgAWJw", clientKey: "WEwIEqRQcT2qDKr3vZIT6OfbHhkBCHkW3Bypbxzs")
-//        
-//        // Override point for customization after application launch.
-//        PFFacebookUtils.initializeFacebook()
+        Parse.setApplicationId("NhcS0iBHP5ffQ1YeMDG3NyPshadfMfKNsCAjE4MY", clientKey: "43EUviAB9LnZY4J6JMqFmexyV9FnjqjK1twNa1Zj")
         
-        FBLoginView.classForCoder()
+        // Override point for customization after application launch.
+        PFFacebookUtils.initializeFacebook()
+        
         return true
     }
 
@@ -46,19 +45,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication!) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        PFFacebookUtils.session().close()
     }
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString, annotation: AnyObject) -> Bool {
-        
-        var wasHandled:Bool = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
-
-        return wasHandled
-            //return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication, withSession:PFFacebookUtils.session())
+    func application(application: UIApplication, openURL url: NSURL,
+        sourceApplication: NSString, annotation: AnyObject) -> Bool {            
+            return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication,
+                withSession:PFFacebookUtils.session())
     }
     
-//    func applicationDidBecomeActive(application: UIApplication) {
-//        FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
-//    }
+    func applicationDidBecomeActive(application: UIApplication) {
+        FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
+    }
 
 }
 

@@ -13,21 +13,20 @@ class LogInViewController: UIViewController, FBLoginViewDelegate {
     //@IBOutlet weak var backView: UIView!
     @IBOutlet weak var huddl: UILabel!
     @IBOutlet weak var back: UIView!
-    @IBOutlet weak var logInFB: FBLoginView!
+    @IBOutlet var logInButton: UIButton!
     
     var activityIndicator: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if FBSession.activeSession().isOpen {
-            println("LOGGED IN")
+
+        if PFFacebookUtils.isLinkedWithUser(PFUser.currentUser()) {
             self.performSegueWithIdentifier("loggedIn", sender: self)
         }
         
-        logInFB.delegate = self
-        logInFB.readPermissions = ["user_friends", "read_friendlists", "manage_friendslists"]
+        logInButton.backgroundColor = GroupsandEventsTableViewController().UIColorFromRGB(facebookBlue)
+        logInButton.layer.cornerRadius = 4
 
         back.backgroundColor = GroupsandEventsTableViewController().UIColorFromRGB(orangeColor)
         back.alpha = 0.7
@@ -37,14 +36,7 @@ class LogInViewController: UIViewController, FBLoginViewDelegate {
         
         
         self.navigationItem.setHidesBackButton(true, animated: false)
-
-        
-        
-        
-//        if PFFacebookUtils.isLinkedWithUser(PFUser.currentUser()) {
-//            self.navigationController.performSegueWithIdentifier("loggedIn", sender: self)
-//        }
-        // Do any additional setup after loading the view.
+  
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,29 +44,22 @@ class LogInViewController: UIViewController, FBLoginViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
-        if FBSession.activeSession().isOpen {
-            println("LOGGED IN")
-            self.performSegueWithIdentifier("loggedIn", sender: self)
-        }
+    @IBAction func logIn(sender: AnyObject) {
+        var permissionsArray: NSArray = ["public_profile", "read_friendlists", "user_friends"]
+        
+        PFFacebookUtils.logInWithPermissions(permissionsArray, {
+            (user: PFUser!, error: NSError!) -> Void in
+            if !user {
+                NSLog("Uh oh. The user cancelled the Facebook login.")
+            } else if user.isNew {
+                NSLog("User signed up and logged in through Facebook!")
+                self.performSegueWithIdentifier("loggedIn", sender: self)
+            } else {
+                NSLog("User logged in through Facebook!")
+                self.performSegueWithIdentifier("loggedIn", sender: self)
+            }
+            })
     }
-    
-//    @IBAction func logIn(sender: AnyObject) {
-//        var permissionsArray: NSArray = ["user_about_me", "user_relationships", "user_birthday", "user_location"]
-//        
-//        PFFacebookUtils.logInWithPermissions(permissionsArray, {
-//            (user: PFUser!, error: NSError!) -> Void in
-//            if !user {
-//                NSLog("Uh oh. The user cancelled the Facebook login.")
-//            } else if user.isNew {
-//                NSLog("User signed up and logged in through Facebook!")
-//                self.navigationController.performSegueWithIdentifier("loggedIn", sender: self)
-//            } else {
-//                NSLog("User logged in through Facebook!")
-//                self.navigationController.performSegueWithIdentifier("loggedIn", sender: self)
-//            }
-//            })
-//    }
 
     /*
     // MARK: - Navigation

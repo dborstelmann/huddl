@@ -10,9 +10,7 @@
 		7307B1DF19856D75000E4A44 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307B1DE19856D75000E4A44 /* LogInViewController.swift */; };
 		7307B1E119856F65000E4A44 /* GroupsandEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307B1E019856F65000E4A44 /* GroupsandEventsTableViewController.swift */; };
 		7307B1E319857123000E4A44 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307B1E219857123000E4A44 /* Events.swift */; };
-		7307B1E519857AAC000E4A44 /* groupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307B1E419857AAC000E4A44 /* groupManager.swift */; };
-		7307B1E719858A08000E4A44 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7307B1E619858A08000E4A44 /* Parse.framework */; };
-		7307B33E19858BC2000E4A44 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7307B33D19858BC2000E4A44 /* FacebookSDK.framework */; };
+		7307B1E519857AAC000E4A44 /* group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307B1E419857AAC000E4A44 /* group.swift */; };
 		7307B34019859727000E4A44 /* IndivGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7307B33F19859727000E4A44 /* IndivGroup.swift */; };
 		7307B3431985AF22000E4A44 /* icon_3707.png in Resources */ = {isa = PBXBuildFile; fileRef = 7307B3421985AF22000E4A44 /* icon_3707.png */; };
 		7307B3451985AF2C000E4A44 /* icon_25409.png in Resources */ = {isa = PBXBuildFile; fileRef = 7307B3441985AF2C000E4A44 /* icon_25409.png */; };
@@ -32,6 +30,8 @@
 		7310CE9819856505006B3F92 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310CE9719856505006B3F92 /* SecondViewController.swift */; };
 		7310CE9B19856505006B3F92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7310CE9919856505006B3F92 /* Main.storyboard */; };
 		7310CEA919856505006B3F92 /* Group_ChoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7310CEA819856505006B3F92 /* Group_ChoiceTests.swift */; };
+		7394FAFC19873EBD0050D1DD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7394FAFB19873EBD0050D1DD /* Parse.framework */; };
+		7394FAFE19873ED60050D1DD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7394FAFD19873ED60050D1DD /* FacebookSDK.framework */; };
 		73BCCCEC1986E6560011341A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BCCCEB1986E6560011341A /* AudioToolbox.framework */; };
 		73BCCCEE1986E65D0011341A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BCCCED1986E65D0011341A /* CFNetwork.framework */; };
 		73BCCCF01986E6630011341A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BCCCEF1986E6630011341A /* CoreGraphics.framework */; };
@@ -58,9 +58,7 @@
 		7307B1DE19856D75000E4A44 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		7307B1E019856F65000E4A44 /* GroupsandEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsandEventsTableViewController.swift; sourceTree = "<group>"; };
 		7307B1E219857123000E4A44 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
-		7307B1E419857AAC000E4A44 /* groupManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = groupManager.swift; sourceTree = "<group>"; };
-		7307B1E619858A08000E4A44 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../Downloads/Parse.framework; sourceTree = "<group>"; };
-		7307B33D19858BC2000E4A44 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		7307B1E419857AAC000E4A44 /* group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = group.swift; sourceTree = "<group>"; };
 		7307B33F19859727000E4A44 /* IndivGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndivGroup.swift; sourceTree = "<group>"; };
 		7307B3421985AF22000E4A44 /* icon_3707.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_3707.png; sourceTree = "<group>"; };
 		7307B3441985AF2C000E4A44 /* icon_25409.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_25409.png; sourceTree = "<group>"; };
@@ -84,6 +82,8 @@
 		7310CEA219856505006B3F92 /* Group ChoiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Group ChoiceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7310CEA719856505006B3F92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7310CEA819856505006B3F92 /* Group_ChoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group_ChoiceTests.swift; sourceTree = "<group>"; };
+		7394FAFB19873EBD0050D1DD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = ../../../../Downloads/Parse.framework; sourceTree = "<group>"; };
+		7394FAFD19873ED60050D1DD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		73BCCCEB1986E6560011341A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		73BCCCED1986E65D0011341A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		73BCCCEF1986E6630011341A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,13 +106,13 @@
 				73BCCCFC1986E68E0011341A /* Security.framework in Frameworks */,
 				73BCCCFE1986E68E0011341A /* SystemConfiguration.framework in Frameworks */,
 				73BCCCF61986E67D0011341A /* MobileCoreServices.framework in Frameworks */,
+				7394FAFC19873EBD0050D1DD /* Parse.framework in Frameworks */,
 				73BCCCF41986E6730011341A /* libz.dylib in Frameworks */,
 				73BCCCF21986E66A0011341A /* CoreLocation.framework in Frameworks */,
 				73BCCCF01986E6630011341A /* CoreGraphics.framework in Frameworks */,
+				7394FAFE19873ED60050D1DD /* FacebookSDK.framework in Frameworks */,
 				73BCCCEE1986E65D0011341A /* CFNetwork.framework in Frameworks */,
 				73BCCCEC1986E6560011341A /* AudioToolbox.framework in Frameworks */,
-				7307B33E19858BC2000E4A44 /* FacebookSDK.framework in Frameworks */,
-				7307B1E719858A08000E4A44 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +171,7 @@
 				73EAB13419872947001D7DA3 /* huddlNav.swift */,
 				7307B1DE19856D75000E4A44 /* LogInViewController.swift */,
 				7307B1E019856F65000E4A44 /* GroupsandEventsTableViewController.swift */,
-				7307B1E419857AAC000E4A44 /* groupManager.swift */,
+				7307B1E419857AAC000E4A44 /* group.swift */,
 				7307B33F19859727000E4A44 /* IndivGroup.swift */,
 				7307B1E219857123000E4A44 /* Events.swift */,
 				7310CE9519856505006B3F92 /* FirstViewController.swift */,
@@ -179,6 +179,7 @@
 				7310CE9919856505006B3F92 /* Main.storyboard */,
 				7307B3481985B6B0000E4A44 /* Images.xcassets */,
 				7307B3411985AF13000E4A44 /* Images */,
+				7394FAFB19873EBD0050D1DD /* Parse.framework */,
 				73BCCCF71986E68E0011341A /* QuartzCore.framework */,
 				73BCCCF81986E68E0011341A /* Security.framework */,
 				73BCCCFA1986E68E0011341A /* SystemConfiguration.framework */,
@@ -188,8 +189,7 @@
 				73BCCCEF1986E6630011341A /* CoreGraphics.framework */,
 				73BCCCED1986E65D0011341A /* CFNetwork.framework */,
 				73BCCCEB1986E6560011341A /* AudioToolbox.framework */,
-				7307B33D19858BC2000E4A44 /* FacebookSDK.framework */,
-				7307B1E619858A08000E4A44 /* Parse.framework */,
+				7394FAFD19873ED60050D1DD /* FacebookSDK.framework */,
 				7310CE9119856505006B3F92 /* Supporting Files */,
 			);
 			path = "Group Choice";
@@ -269,7 +269,7 @@
 				TargetAttributes = {
 					7310CE8D19856505006B3F92 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = 2QT42FZAH3;
+						DevelopmentTeam = N6Z8B36342;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -343,7 +343,7 @@
 				7307B34019859727000E4A44 /* IndivGroup.swift in Sources */,
 				7307B1E119856F65000E4A44 /* GroupsandEventsTableViewController.swift in Sources */,
 				7310CE9819856505006B3F92 /* SecondViewController.swift in Sources */,
-				7307B1E519857AAC000E4A44 /* groupManager.swift in Sources */,
+				7307B1E519857AAC000E4A44 /* group.swift in Sources */,
 				7310CE9419856505006B3F92 /* AppDelegate.swift in Sources */,
 				73EAB13519872947001D7DA3 /* huddlNav.swift in Sources */,
 				7310CE9619856505006B3F92 /* FirstViewController.swift in Sources */,

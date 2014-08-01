@@ -21,16 +21,16 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>URL schemes</key>
+			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb608915202562781</string>
+				<string>fb1454231121498084</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>608915202562781</string>
+	<string>1454231121498084</string>
 	<key>FacebookDisplayName</key>
 	<string>huddl</string>
 	<key>LSRequiresIPhoneOS</key>
